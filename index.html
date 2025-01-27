@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLO Landing page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+     <!-- Header -->
+     <header>
+      <div class="logo">Solomon<span>Wangui</span></div>
+      <nav>
+          <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about-me">About</a></li>
+              <li><a href="#contact-me">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+      <h1>Hi, I'm Solomon Wangui</h1>
+      <p>A web designer</p>
+  </section>
+       
+        <div class="btn">
+          <button class="sbtn"><a href="#">Let`s Talk</a></button>
+        </div>
+        <div class="social-links">
+          <a
+          href="https://www.facebook.com/"
+            target="_blank"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://github.com/SolomonKarimof" target="_blank">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+              alt="GitHub"
+            />
+          </a>
+         
+          </a>
+        </div>
+        <div class="profile"></div>
+      </div>
+    </div>
+   <!-- About Me Section -->
+<div id="about-me" class="about">
+  <h1>About Me</h1>
+  <p>
+    Hello! I’m Solomon Wangui, a passionate <strong>Web Developer</strong> with a knack for creating dynamic, user-friendly, and visually appealing websites. 
+    With expertise in front-end and back-end technologies, I specialize in delivering responsive designs and optimized solutions tailored to client needs.
+  </p>
+  <p>
+    My journey in web development has been fueled by curiosity and the joy of problem-solving. I constantly strive to learn and implement the latest industry trends, ensuring that my projects are innovative and efficient.
+  </p>
+  <p>
+    Let’s create something amazing together!
+  </p>
+</div>
+
+
+    <div id="contact-me" class="contact">
+      <h2>Contact Me</h2>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+      <div class="contact-left">
+        <h3>LET'S</h3>
+        <h1>CONNECT</h1>
+        <h2>LET'S START OUR STORY TOGETHER</h2>
+      </div>
+      <div class="contact-right">
+        <form
+        action="https://formsubmit.co/solomonkarimiw@gmail.com"
+        method="POST"
+        onsubmit="return validateEmail()"
+      >
+        <div style="display: flex; gap: 10px">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            required
+          />
+          <input type="text" name="lastName" placeholder="Last Name" required />
+        </div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email*"
+          id="emailInput"
+          required
+        />
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea
+          name="message"
+          placeholder="Leave us a message..."
+          required
+        ></textarea>
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="hidden"
+          name="_cc"
+          value="another@email.com,yetanother@email.com"
+        />
+        <button type="submit">Submit</button>
+      </form>
+      
+      </div>
+    </div>
+  </body>
+  <script>
+  // JavaScript email validation
+  function validateEmail() {
+    const emailInput = document.getElementById("emailInput").value;
+    const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+    if (!gmailRegex.test(emailInput)) {
+      alert("Please use a valid Gmail address.");
+      return false; // Prevent form submission
+    }
+
+    return true; // Allow form submission
+  }
+</script>
+</html>
